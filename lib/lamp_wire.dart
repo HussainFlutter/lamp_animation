@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class LampHead extends StatelessWidget {
+class LampWire extends StatelessWidget {
   final double screenHeight;
   final double screenWidth;
   final Color color;
-  const LampHead({
+  const LampWire({
     super.key,
     required this.screenHeight,
     required this.screenWidth,

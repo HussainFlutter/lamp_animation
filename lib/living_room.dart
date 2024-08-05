@@ -3,13 +3,15 @@ import 'package:lamp_animation/lamp.dart';
 
 import 'bulb.dart';
 import 'lamp_button.dart';
-import 'lamp_head.dart';
+import 'lamp_wire.dart';
 
+// Colors that i have used
 const darkGray = Color(0xff232323);
 const bulbOnColor = Color(0xffFFE12C);
 const bulbOffColor = Color(0xffC1C1C1);
 const gradientStartColor = Color(0xffFDF380);
 const gradientEndColor = Color(0xFFFFFFED);
+//Duration of the animation
 const animationDuration = Duration(milliseconds: 200);
 
 class LivingRoom extends StatefulWidget {
@@ -30,7 +32,7 @@ class _LivingRoomState extends State<LivingRoom> {
       body: SafeArea(
         child: Stack(
           children: <Widget>[
-            LampHead(
+            LampWire(
               color: darkGray,
               screenHeight: screenHeight,
               screenWidth: screenWidth,
@@ -53,6 +55,7 @@ class _LivingRoomState extends State<LivingRoom> {
             ),
             LampButton(
               onChanged: (value) {
+                // Use your state management solution here.
                 isBulbOn = value;
                 setState(() {});
               },
